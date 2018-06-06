@@ -1,7 +1,6 @@
-const profileHandler=(req, res) => {
+const profileHandler = (req, res) => {
     const { id } = req.params;
-        db
-        .select("*")
+    db.select("*")
         .from("users")
         .where({ id: id })
         .then(user => {
@@ -12,7 +11,7 @@ const profileHandler=(req, res) => {
             }
         })
         .catch(err => res.status(400).json("error at user"));
-    }
+};
 module.exports = {
-    profileHandler:profileHandler
+    profileHandler: profileHandler
 };
