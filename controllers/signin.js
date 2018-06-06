@@ -23,24 +23,7 @@ const handleSignin = (req, res, db, bcrypt) => {
             }
         })
         .catch(err => res.status(400).json("wrong credentials"));
-    // bcrypt.compare("456",'$2a$10$opUGHi8SXaPjuS.Ig.cBYe86m3tEviEjotLiwY82zZkA4pIePhtLi', function(err, res) {
-    //     // res == true
-    //     console.log('first guess',res)
-    // });
-    // bcrypt.compare("veggies",'$2a$10$opUGHi8SXaPjuS.Ig.cBYe86m3tEviEjotLiwY82zZkA4pIePhtLi', function(err, res) {
-    //
-    //     console.log('secong guess',res)
-    // });
-    // if (
-    //     req.body.email === database.users[0].email &&
-    //     req.body.password === database.users[0].password
-    // ) {
-    //     res.json(database.users[database.users.length - 1]);
-    // } else {
-    //     res.status(404).json("error logging");
-    // }
-    //
-    // res.json("signin");
+   
 };
 module.exports = {
     handleSignin: handleSignin
